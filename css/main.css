@@ -1,58 +1,85 @@
-*{
+/* Import Fonts */
+@import url("");
+@import url("");
 
+/* Artboard */
+* {
+    --min-width: 1280px;
+    --header-font: "", serif;
+    --para-font: "", sans-serif;
+
+    --txt-color: white;
+
+    --header-bg-color: black;
+    --header-height: 100px;
+    --header-padding: 10px;
+
+    --body-bg-img: url("bg.jpg");
+
+    --navbar-font-size: 45px;
+    --navbar-padding: 2vw;
+
+    --a-color: white;
+    --a-transition-time: 250ms;
+    --a-visited-color: white;
+    --a-active-color: darkgreen;
+    --a-border-size: 3px;
 }
 
-body{
+html, body {
+    padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    min-width: var(--min-width);
 }
 
-header{
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font);
+}
+p {
+    font-family: var(--para-font);
+}
+
+header {
     position: relative;
-    background-color: black;
-    height: 100px;
-	padding-top: 10px;
-    min-width: 1280px;
+    background-color: var(--header-bg-color);
+    height: var(--header-height);
+	padding-top: var(--header-padding);
+}
+body {
+    background-image: var(--body-bg-img);
 }
 
-header h2{
+.navbar h2 {
     display: inline;
-    font-size: 45px;
-    font-variant: small-caps;
-    padding-right: 2vw;
-    padding-left: 2vw;
+    font-size: var(--navbar-font-size);
+    padding-right: var(--navbar-padding);
+    padding-left: var(--navbar-padding);
 }
-
-.navbar{
+.navbar {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-a{
+a {
   display: inline-block;
-  color: white;
+  color: var(--a-color);
   text-decoration: none;
 }
-
 a::after {
   display: block;
   content: '';
-  border-bottom: solid 3px white;
+  border-bottom: solid var(--a-border-size) var(--a-color);
   transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
+  transition: transform var(--a-transition-time) ease-in-out;
 }
-
 a:hover::after{
     transform: scaleX(1);
 }
-
 a:active{
-    color: darkgreen;
+    color: var(--a-active-color);
 }
-
-a:visited{
-    color: white;
-    text-decoration: none;
+a:visited {
+    color: var(--a-visited-color);
 }
