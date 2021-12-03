@@ -14,10 +14,18 @@
     --header-height: 100px;
     --header-padding: 10px;
 
-    --body-bg-img: url("bg.jpg");
-
     --navbar-font-size: 45px;
     --navbar-padding: 2vw;
+
+    --page-title-height: 300px;
+    --page-title-padding: 20px;
+    --page-title-bg-img: url("../images/bg.jpg");
+    --page-title-top-color: rgba(0, 0, 0, 0.308);
+    --page-title-bottom-color: rgb(14, 14, 14);
+    --page-title-gradient: var(--page-title-top-color), var(--page-title-bottom-color);
+    --page-title-color: green;
+    --page-title-stroke-size: 1px;
+    --page-title-stroke-color: black;
 
     --a-color: white;
     --a-transition-time: 250ms;
@@ -30,6 +38,8 @@ html, body {
     padding: 0;
     margin: 0;
     min-width: var(--min-width);
+    background: linear-gradient(var(--page-title-gradient)), var(--page-title-bg-img) no-repeat left top;
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,6 +70,16 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.page-title {
+    height: var(--page-title-height);
+    padding-top: var(--page-title-padding);
+    padding-bottom: var(--page-title-padding);
+    text-align: center;
+    color: var(--page-title-color);
+    text-decoration: none;
+	-webkit-text-stroke: var(--page-title-stroke-size) var(--page-title-stroke-color);
 }
 
 a {

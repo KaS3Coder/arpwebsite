@@ -1,27 +1,3 @@
 * {
-    --main-top-color: rgb(0,0,0,0);
-    --main-bottom-color: rgb(0,0,0,1);
-    --main-gradient: linear(var(--main-top-color), var(--main-bottom-color));
 
-    --welcome-color: green;
-    --family-color: limegreen;
-    --stroke-size: 1px;
-    --stroke-color: black;
-}
-
-main {
-    color: linear-gradient(var(--main-gradient));
-}
-
-.welcome{
-    text-align: center;
-    color: var(--welcome-color);
-    text-decoration: none;
-	-webkit-text-stroke: var(--stroke-size) var(--stroke-color);
-}
-
-.family{
-    text-align: center;
-    color: var(--family-color);
-	-webkit-text-stroke: var(--stroke-size) var(--stroke-color);
 }
