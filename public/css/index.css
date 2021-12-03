@@ -1,0 +1,12 @@
+.welcome{
+    text-align: center;
+    color: green;
+    text-decoration: none;
+	-webkit-text-stroke: 1px black;
+}
+
+.family{
+    text-align: center;
+    color: limegreen;
+	-webkit-text-stroke: 1px black;
+}
