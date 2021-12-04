@@ -4,20 +4,20 @@
 
 /* Artboard */
 * {
-    --min-width: 1280px;
+    --min-width: 300px;
     --header-font: "", serif;
     --para-font: "", sans-serif;
 
     --txt-color: white;
 
     --header-bg-color: black;
-    --header-height: 100px;
+    --header-size: 100px;
     --header-padding: 10px;
 
     --navbar-font-size: 45px;
     --navbar-padding: 2vw;
 
-    --page-title-height: 300px;
+    --page-title-height: 3vh;
     --page-title-padding: 20px;
     --page-title-bg-img: url("../images/bg.jpg");
     --page-title-top-color: rgba(0, 0, 0, 0.308);
@@ -52,7 +52,7 @@ p {
 header {
     position: relative;
     background-color: var(--header-bg-color);
-    height: var(--header-height);
+    height: var(--header-size);
 	padding-top: var(--header-padding);
 }
 body {
@@ -60,7 +60,7 @@ body {
 }
 
 .navbar h2 {
-    display: inline;
+    display: inline-block;
     font-size: var(--navbar-font-size);
     padding-right: var(--navbar-padding);
     padding-left: var(--navbar-padding);
@@ -83,7 +83,6 @@ body {
 }
 
 a {
-  display: inline-block;
   color: var(--a-color);
   text-decoration: none;
 }
@@ -102,4 +101,17 @@ a:active{
 }
 a:visited {
     color: var(--a-visited-color);
+}
+
+/* Support for large monitors */
+/* vars do not work with the conditional (min-width) */
+@media only screen and (min-width: 1400px) {
+    body {
+        /*blahblahblah*/
+    }
+}
+
+/* Support for phones */
+@media only screen and (max-width: 500px) {
+
 }
